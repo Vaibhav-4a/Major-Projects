@@ -1,0 +1,41 @@
+<footer>
+    <div class="connect">
+        <h5>Copyright  ©  <%= date %> &nbsp; </h5>
+        <img src="styles/instagram.png" alt="" >
+        <img src="styles/twitter.png" alt="">
+        <img id="f" src="styles/facebook.png" alt="">
+    </div>
+</footer>
+</body>
+<script>
+    function done(){
+        alert("File Created!!");
+    }
+    const element = document.getElementById("menu");
+    var left = -27;
+    function toggle() {
+        if (Math.round(left) === 0) {
+            const id = setInterval(function () {
+                if (Math.round(left) === -27) {
+                    clearInterval(id);
+                } else {
+                    left -= 0.35;
+                    element.style.left = left + "vw";
+                }
+            }, 1);
+        }
+        else if(Math.round(left) === -27) {
+            const id = setInterval(function () {
+
+                if (Math.round(left) === 0) {
+                    clearInterval(id);
+                } else {
+                    left += 0.35;
+                    element.style.left = left + "vw";
+                }
+            }, 1);
+        }
+    }
+</script>
+
+</html>
